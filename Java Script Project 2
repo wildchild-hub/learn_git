@@ -1,0 +1,91 @@
+String Manipulation Functions
+Reverse a String:
+
+javascript
+function reverseString(str) {  
+    return str.split('').reverse().join('');  
+}  
+Count Characters:
+
+javascript
+function countCharacters(str) {  
+    return str.length;  
+}  
+Capitalize Words:
+
+javascript
+function capitalizeWords(sentence) {  
+    return sentence.split(' ')  
+                   .map(word => word.charAt(0).toUpperCase() + word.slice(1))  
+                   .join(' ');  
+}  
+Array Functions
+Find Maximum:
+
+javascript
+function findMax(arr) {  
+    return Math.max(...arr);  
+}  
+Find Minimum:
+
+javascript
+function findMin(arr) {  
+    return Math.min(...arr);  
+}  
+Sum of Array:
+
+javascript
+function sumArray(arr) {  
+    return arr.reduce((acc, curr) => acc + curr, 0);  
+}  
+Filter Array:
+
+javascript
+function filterArray(arr, condition) {  
+    return arr.filter(condition);  
+}  
+Mathematical Functions
+Factorial:
+
+javascript
+function factorial(n) {  
+    if (n < 0) return undefined; // Factorial not defined for negative numbers  
+    if (n === 0) return 1;  
+    return n * factorial(n - 1);  
+}  
+Prime Number Check:
+
+javascript
+function isPrime(num) {  
+    if (num <= 1) return false;  
+    for (let i = 2; i <= Math.sqrt(num); i++) {  
+        if (num % i === 0) return false;  
+    }  
+    return true;  
+}  
+Fibonacci Sequence:
+
+javascript
+function fibonacci(n) {  
+    const fib = [0, 1];  
+    for (let i = 2; i < n; i++) {  
+        fib[i] = fib[i - 1] + fib[i - 2];  
+    }  
+    return fib.slice(0, n);  
+}  
+Example Usage
+You can test these functions with the following examples:
+
+javascript
+console.log(reverseString("hello")); // "olleh"  
+console.log(countCharacters("hello")); // 5  
+console.log(capitalizeWords("hello world")); // "Hello World"  
+
+console.log(findMax([1, 2, 3, 4, 5])); // 5  
+console.log(findMin([1, 2, 3, 4, 5])); // 1  
+console.log(sumArray([1, 2, 3, 4, 5])); // 15  
+console.log(filterArray([1, 2, 3, 4, 5], x => x > 3)); // [4, 5]  
+
+console.log(factorial(5)); // 120  
+console.log(isPrime(7)); // true  
+console.log(fibonacci(5)); // [0, 1, 1, 2
