@@ -1,0 +1,116 @@
+<<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Aligned Containers</title>  
+    <link rel="stylesheet" href="style.css">
+</style>
+</head>
+<body>
+  
+    <div class="container">
+        <div class="box box-1">
+            <div>Supervisor</div>
+            <p>Overseeing daily operations and ensuring that the team meets productivity and quality standards.</p>
+        </div>
+
+        <div class="nested-container">
+            <div class="box box-2">
+                <div>Team Builder</div>
+                <p>These activities encourage participation and engagement from all team members, helping individuals connect on a personal level.</p>
+            </div>
+                
+            <div class="box box-3">
+            <div>Karma</div>
+             <p>Points are awarded for desirable actions, reinforcing positive behavior and encouraging users to contribute meaningfully.</p>
+            </div>
+        </div>
+                
+            <div class="box box-4">
+                <div>Calculator</div>
+                <p>The foundational functions for performing straightforward calculations.</p>
+            </div>
+                
+        </div>
+
+</body>
+</html>
+
+
+#style.css
+/*style.css*/
+{
+    margin:0%;
+    padding:0;
+    box-sizing:border-box;
+    background-color: antiquewhite;/
+}
+
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container{
+    display: flex;
+    width:90%;
+    max-width: 1200px;
+    align-items: center;
+    gap: 10px;
+}
+
+.box{
+    background-color: white;
+    flex: 1;
+    padding: 20px;
+    border-top: 5px solid transparent;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.box-1{
+    border-top-color: red;
+}
+
+.nested-container{
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    flex: 1;
+    gap:10px;
+    height:500px;
+    justify-items: center;
+}
+
+.box-2{
+    border-top-color: blue;
+}
+
+.box-3{
+    border-top-color: green;
+}
+
+.box-4{
+border-top-color: orange;
+}
+
+.imgsrc{
+    display: flex;
+    width: 20px;%;
+    align-items: left-bottom;
+    gap: 10px;
+}
+
+@media (max-width:768px){
+    .container{
+        flex-direction: column;
+    }
+    .nested-container{
+        /*margin: 0 10px;*/
+    }
+}
